@@ -22,7 +22,7 @@ def create_user():
 
 
     try:
-        user = User(name=format_string(data['name'], 'name'), email=email, password=data['password'])
+        user = User(name=format_string(data['name'], 'name'), email=email)
     except ValueError as ve:
         return jsonify({'Error':str(ve)}), 400
     except EmailNotValidError as enve:
