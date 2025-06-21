@@ -12,3 +12,7 @@ class UserRepository:
         for user in registered_users:
             if user.id == id:
                 return user
+
+    @staticmethod
+    def get_all_users() -> list:
+        return registered_users

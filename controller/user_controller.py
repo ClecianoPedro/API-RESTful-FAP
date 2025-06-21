@@ -48,3 +48,10 @@ def get_user_by_id(id):
     except Exception as e:
         return jsonify({'Error': str(e)}), 404
 
+@user_bp.route('', methods=['GET'])
+def get_all():
+    try:
+        users = UserService.get_all_users()
+        return jsonify(users), 200
+    except Exception as e:
+        return jsonify({'Error': str(e)}), 404

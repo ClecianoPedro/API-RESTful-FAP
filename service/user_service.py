@@ -22,3 +22,8 @@ class UserService:
             raise IdNotFoundException('ID não encontrado')
         return user
 
+    @staticmethod
+    def get_all_users():
+        users = UserRepository.get_all_users()
+        return [user.to_dict() for user in users]
+    
