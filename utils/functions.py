@@ -21,10 +21,10 @@ def validate_email_with_domain(email:str):
             raise ValueError(f"Erro ao validar o e-mail: {str(e)}")
 
 def format_string(string:str, key:str):
-    '''Remove os espaços do inicio e do final, caso haja 2 ou mais espaços seguidos substitui por apenas 1 e transforma em minúsculo'''
+    '''Remove os espaços do inicio e do final, caso haja 2 ou mais espaços seguidos substitui por apenas 1 e transforma 1 letra em maiúscula'''
     def replace_spaces(string):
         '''Substitui 2 ou mais espaços por apenas 1 e transforma para minusculo'''
-        return re.sub(r'\s+', ' ', string).strip().lower()
+        return re.sub(r'\s+', ' ', string).strip().capitalize()
     
     def has_special_characters(string:str) -> bool:
         '''Verifica se string contém caracteres especiais'''
