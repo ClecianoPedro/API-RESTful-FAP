@@ -69,7 +69,7 @@ def uptade_user(id):
 
     try:
         validate_email_with_domain(data['email'])
-        email = data['email']
+        new_email = data['email']
     except EmailNotValidError as enve:
         return jsonify({'Error':str(enve)}), 400
     except ValueError as ve:
@@ -87,7 +87,7 @@ def uptade_user(id):
         return jsonify({'Error':str(e)}), 404
 
     try:
-        user_updated = UserService.update_user(id, name, email)
+        user_updated = UserService.update_user(id, name, new_email)
         return jsonify(user_updated.to_dict()), 200
     except IdNotFoundException as infe:
         return jsonify({'Error': str(infe)}), 400

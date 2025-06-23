@@ -32,13 +32,14 @@ class UserService:
         return [user.to_dict() for user in users]
     
     @staticmethod
-    def update_user(id:int, name:str, email:str) -> object:
+    def update_user(id:int, name:str, new_email:str) -> object:
         user = UserService.get_user_by_id(id)
-        if UserService.get_user_by_email(email):
-            raise EmailException ('Endereço de email já está em uso')
-        user.name = name
-        user.email = email
+        for i in registered_users:
+            if i.email == new_email and i.id != id:
+                raise EmailException('Email já está em uso')
+            user.name = name
+            user.email = new_email
         
-        user_updated = UserRepository.update_user(user)
-        if user_updated:
-            return user_updated
+        return UserRepository.update_user(user)
+
+
