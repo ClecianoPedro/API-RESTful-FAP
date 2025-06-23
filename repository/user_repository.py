@@ -33,4 +33,9 @@ class UserRepository:
                 registered_users[index] = data
                 return data
 
-
+    @staticmethod
+    def delete_user(id:int) -> bool:
+        for i in registered_users:
+            if i.id == id:
+                registered_users.remove(i)
+                return True

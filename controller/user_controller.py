@@ -96,3 +96,14 @@ def uptade_user(id):
     except Exception as e:
         return jsonify({'Error':str(e)}), 404
 
+@user_bp.route('/<int:id>', methods=['DELETE'])
+def delete_user(id):
+    try:
+        user_to_delete = UserService.delete_user(id)
+        return jsonify({'Message': str(user_to_delete)}), 200
+    except IdNotFoundException as idne:
+        return jsonify({'Error': str(idne)}), 400
+    except ValueError as ve:
+        return jsonify({'Error': str(ve)}), 400
+    except Exception as e:
+        return jsonify({'Error': str(e)}), 404

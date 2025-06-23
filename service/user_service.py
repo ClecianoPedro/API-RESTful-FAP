@@ -42,4 +42,7 @@ class UserService:
         
         return UserRepository.update_user(user)
 
-
+    @staticmethod
+    def delete_user(id:int) -> object:
+        if UserService.get_user_by_id(id):
+            return UserRepository.delete_user(id)
