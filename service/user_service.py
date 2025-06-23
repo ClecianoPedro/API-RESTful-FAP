@@ -1,5 +1,7 @@
 from model.user import User
-from repository.user_repository import registered_users, UserRepository
+from data.users import registered_users
+from repository.user_repository import UserRepository
+
 from exceptions.UserExceptions import IdNotFoundException, ExistingUserException, EmailException
 
 class UserService:

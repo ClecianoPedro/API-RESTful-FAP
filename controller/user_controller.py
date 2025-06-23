@@ -57,7 +57,7 @@ def get_all():
         return jsonify({'Error': str(e)}), 404
     
 @user_bp.route('/<int:id>', methods=['PUT'])
-def uptade_user(id):
+def update_user(id):
     data = request.get_json()
 
     try:
