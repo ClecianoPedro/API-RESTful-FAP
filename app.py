@@ -2,8 +2,10 @@ from flask import Flask
 from controller.welcome_controller import welcome_bp
 from controller.user_controller import user_bp
 from utils.load_user_data import load_users_from_file
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 try:
     load_users_from_file()
