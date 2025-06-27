@@ -6,27 +6,26 @@ Este é um projeto de uma **API RESTful** construída em **Python com Flask**, o
 
 ## 🧱 Estrutura do Projeto
 
+```
 API-RESTful-FAP/
 ├── app.py
 ├── config.py
 ├── controller/
-│ └── user_controller.py
+│   └── user_controller.py
 ├── service/
-│ └── user_service.py
+│   └── user_service.py
 ├── repository/
-│ └── user_repository.py
+│   └── user_repository.py
 ├── model/
-│ └── user.py
+│   └── user.py
 ├── utils/
-│ ├── functions.py
-│ └── load_user_data.py
+│   ├── functions.py
+│   └── load_user_data.py
 ├── data/
-│ └── users.json
+│   └── users.json
 ├── requirements.txt
 └── README.md
-
-
----
+```
 
 ## 🚀 Tecnologias Utilizadas
 
