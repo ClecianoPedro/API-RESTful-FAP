@@ -49,22 +49,22 @@ API-RESTful-FAP/
 # Clone o projeto
 git clone https://github.com/ClecianoPedro/API-RESTful-FAP.git
 
-# Crie um ambiente virtual (opcional)
+## Crie um ambiente virtual (opcional)
 ```
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
 venv\Scripts\activate     # Windows
 ```
 
-# Instale as dependências
+## Instale as dependências
 pip install -r requirements.txt
 
-# Rode a aplicação
+## Rode a aplicação
 python app.py
 
 ## 📚 Endpoints da API
 
-# ✅ Criar usuário
+## ✅ Criar usuário
 POST /usuarios
 ```
 json
@@ -73,13 +73,13 @@ json
   "email": "exemplo@gmail.com"
 }
 ```
-# 🔍 Buscar usuário por ID
+## 🔍 Buscar usuário por ID
 GET /usuarios/<id>
 
 # 📩 Buscar todos usuários
 GET /usuarios
 
-# 🛠️ Atualizar usuário
+## 🛠️ Atualizar usuário
 PUT /usuarios/<id>
 ```
 json
@@ -88,7 +88,7 @@ json
   "email": "novo_email@gmail.com"
 }
 ```
-❌ Deletar usuário
+## ❌ Deletar usuário
 DELETE /usuarios/<id>
 
 ## 🧪 Validações
